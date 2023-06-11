@@ -9,6 +9,7 @@ const yoga = createYoga({ schema })
 const server = createServer(yoga)
 
 // Start the server and you're done!
-server.listen(4000, () => {
-    console.info('Server is running on http://localhost:4000/graphql')
+const PORT = process.env.PORT || 4000
+server.listen(PORT, () => {
+    console.info(`Server is running on http://localhost:${PORT}/graphql`)
 })
